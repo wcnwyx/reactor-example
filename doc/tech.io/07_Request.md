@@ -145,4 +145,13 @@ Note that you should not block or invoke operations with latency in these callba
 operations.
 ```markdown
 注意，您不应该在这些回调中阻塞或调用具有延迟的操作（对于其他操作符回调，如map也是如此）：它更适合快速操作。
+
+    // Return a Flux with all users stored in the repository that prints "Starring:" at first, "firstname lastname" for all values and "The end!" on complete
+    Flux<User> fluxWithDoOnPrintln() {
+        return repository
+                .findAll()
+                .doFirst(()->System.out.println("Starring:"))
+                .doOnNext(user -> System.out.println(user.getFirstname()+" "+user.getLastname()))
+                .doOnComplete(()->System.out.println("The end!"));
+    }
 ```

@@ -53,7 +53,11 @@ public class Part06Request {
 
     // Return a Flux with all users stored in the repository that prints "Starring:" at first, "firstname lastname" for all values and "The end!" on complete
     Flux<User> fluxWithDoOnPrintln() {
-        return null;
+        return repository
+                .findAll()
+                .doFirst(()->System.out.println("Starring:"))
+                .doOnNext(user -> System.out.println(user.getFirstname()+" "+user.getLastname()))
+                .doOnComplete(()->System.out.println("The end!"));
     }
 
 }
