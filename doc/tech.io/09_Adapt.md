@@ -1,3 +1,5 @@
+翻译自：[https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/Adapt](https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/Adapt)
+
 #Adapt
 ***
 You can make RxJava3 and Reactor 3 types interact without a single external library.

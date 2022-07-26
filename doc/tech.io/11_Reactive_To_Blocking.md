@@ -1,3 +1,5 @@
+翻译自：[https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/ReactiveToBlocking](https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/ReactiveToBlocking)
+
 #Reactive to Blocking
 ***
 Sometimes you can only migrate part of your code to be reactive, and you need 
