@@ -59,7 +59,8 @@ In this lesson we'll see different factory methods to create a `Flux`.
 Let's try a very simple example: just return an empty flux.  
 ```markdown
 让我们尝试一个非常简单的示例：只返回一个空的flux。  
-
+```
+```markdown
     // Return an empty Flux
     Flux<String> emptyFlux() {
       return Flux.empty();
@@ -69,7 +70,9 @@ Let's try a very simple example: just return an empty flux.
 One can also create a Flux out of readily available data:  
 ```markdown
 还可以从现成的数据中创建Flux：  
+```
 
+```markdown
 	// Return a Flux that contains 2 values "foo" and "bar" without using an array or a collection
 	Flux<String> fooBarFluxFromValues() {
 		return Flux.just("foo", "bar");
@@ -80,7 +83,9 @@ This time we will use items of a list to publish on the flux
 with `fromIterable`:
 ```markdown
 这一次，我们将使用列表中的项目在flux上发布（通过fromIterable）：
+```
 
+```markdown
     // Create a Flux from a List that contains 2 values "foo" and "bar"
     Flux<String> fooBarFluxFromList() {
         List<String> list = new ArrayList<String>();
@@ -107,7 +112,9 @@ Note that such an event **is terminal: this is the last event the `Flux` will pr
 `Flux#error` produces a `Flux` that simply emits this signal, terminating immediately:
 ```markdown
 Flux#error产生一个Flux，该Flux仅发出【立即终止】信号：
+```
 
+```markdown
     // Create a Flux that emits an IllegalStateException
     Flux<String> errorFlux() {
         return Flux.error(new IllegalStateException());
@@ -121,7 +128,9 @@ But it produces an infinite stream (like ticks of a clock), and we want to
 ```markdown
 为了完成Flux，让我们试着创建一个Flux，以固定的速度生成十个元素。为了定期发布，我们可以使用interval。
 但它会产生一个无限流（就像时钟的滴答声），我们只需要10个元素，所以不要忘记对其进行精确计算。
+```
 
+```markdown
     // Create a Flux that emits increasing values from 0 to 9 each 100ms
     Flux<Long> counter() {
         return Flux.interval(Duration.ofMillis(100)).take(10);

@@ -20,7 +20,9 @@ class. Use the `User#SAUL` constant.
 ```markdown
 在第一个示例中，当原始Mono中出现错误时，我们将使用onErrorReturn方法返回一个包含默认user Saul的Mono。
 如果需要，甚至可以将回退限制为IllegalStateException类。使用用户#SAUL常数。
+```
 
+```markdown
     // Return a Mono<User> containing User.SAUL when an error occurs in the input Mono, else do not change the input Mono.
     Mono<User> betterCallSaulForBogusMono(Mono<User> mono) {
         return mono.onErrorReturn(User.SAUL);
@@ -38,7 +40,9 @@ cache). This can be achieved with `onErrorResume`, which falls back to a `Publis
 Emit both User#SAUL and User#JESSE whenever there is an error in the original FLux:
 ```markdown
 当原始Flux中出现错误时，发射User#SAUL和User#JESSE：
+```
 
+```markdown
     // Return a Flux<User> containing User.SAUL and User.JESSE when an error occurs in the input Flux, else do not change the input Flux.
     Flux<User> betterCallSaulAndJesseForBogusFlux(Flux<User> flux) {
         return flux.onErrorResume(throwable -> Flux.just(User.SAUL, User.JESSE));
@@ -70,7 +74,9 @@ the `GetOutOfHereException` directly.
 ```markdown
 尝试在CapitalMany方法上在一个map内部使用：您需要捕获一个GetOutOfHereException，该异常已被选中，
 但相应的测试仍然直接预期GetOutOfHereException。
+```
 
+```markdown
     // Implement a method that capitalizes each user of the incoming flux using the
     // #capitalizeUser method and emits an error containing a GetOutOfHereException error
     Flux<User> capitalizeMany(Flux<User> flux) {

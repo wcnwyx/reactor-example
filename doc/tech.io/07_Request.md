@@ -46,7 +46,9 @@ This is equivalent to the way you've been using StepVerifier so far.
 ```markdown
 在第一个示例中，创建一个StepVerifier，生成初始无界需求，并在完成之前验证要接收的4个值。
 这相当于您目前使用StepVerifier的方式。
+```
 
+```markdown
     // Create a StepVerifier that initially requests all values and expect 4 values to be received
     StepVerifier requestAllExpectFour(Flux<User> flux) {
         return StepVerifier
@@ -70,7 +72,9 @@ can instead use `.expectTimeout(Duration)`.
 ```markdown
 如果没有更多的请求，源将永远无法完成，除非您取消它。这可以通过使用.thenCancel()来代替终端期望。
 如果您还想确保在一段时间内没有接收到任何传入信号，则可以使用.expectTimeout(Duration)。
+```
 
+```markdown
     // Create a StepVerifier that initially requests 1 value and expects User.SKYLER then requests another value and expects User.JESSE then stops verifying by cancelling the source
     StepVerifier requestOneExpectSkylerThenRequestOneExpectJesse(Flux<User> flux) {
         return StepVerifier
@@ -102,7 +106,9 @@ events like subscribe, onNext...
 ```markdown
 使用repository获取所有用户的Flux，然后对其应用日志。在下面的控制台中观察底层测试如何请求它，
 以及其他事件，如subscribe、onNext等
+```
 
+```markdown
     // Return a Flux with all users stored in the repository that prints automatically logs for all Reactive Streams signals
     Flux<User> fluxWithLog() {
         return repository.findAll().log();
@@ -147,7 +153,9 @@ Note that you should not block or invoke operations with latency in these callba
 operations.
 ```markdown
 注意，您不应该在这些回调中阻塞或调用具有延迟的操作（对于其他操作符回调，如map也是如此）：它更适合快速操作。
+```
 
+```markdown
     // Return a Flux with all users stored in the repository that prints "Starring:" at first, "firstname lastname" for all values and "The end!" on complete
     Flux<User> fluxWithDoOnPrintln() {
         return repository

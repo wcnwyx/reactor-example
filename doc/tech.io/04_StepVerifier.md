@@ -60,7 +60,9 @@ Let's verify the sequence passed to the first test method emits two specific ele
 `"foo"` and `"bar"`, and that the `Flux` then completes successfully.
 ```markdown
 让我们验证传递给第一个测试方法的序列是否发出两个特定元素"foo"和"bar"，然后验证通量是否成功完成。
+```
 
+```markdown
     // Use StepVerifier to check that the flux parameter emits "foo" and "bar" elements then completes successfully.
     void expectFooBarComplete(Flux<String> flux) {
         StepVerifier.create(flux).expectNext("foo", "bar").verifyComplete();
@@ -70,7 +72,9 @@ Let's verify the sequence passed to the first test method emits two specific ele
 Now, let's do the same test but verifying that an exception is propagated at the end.
 ```markdown
 现在，让我们执行相同的测试，但验证是否在最后传播了异常。
+```
 
+```markdown
     // Use StepVerifier to check that the flux parameter emits "foo" and "bar" elements then a RuntimeException error.
     void expectFooBarError(Flux<String> flux) {
         StepVerifier.create(flux).expectNext("foo", "bar").verifyError(RuntimeException.class);
@@ -89,7 +93,9 @@ with a lambda using an AssertJ assertion like `assertThat(...).isEqualTo(...)`):
 甚至可以通过将下一个值传递给 类似断言的断言库 比如AssertJ的assertThat(T)。
 尝试这些基于lambda的版本（例如StepVerifier#assertNext使用AssertJ断言的lambda，
 如assertThat(...).isEqualTo(...)
+```
 
+```markdown
     // Use StepVerifier to check that the flux parameter emits a User with "swhite"username
     // and another one with "jpinkman" then completes successfully.
     void expectSkylerJesseComplete(Flux<User> flux) {
@@ -104,7 +110,9 @@ On this next test we will receive a Flux which takes some time to emit.
 As you can expect, the test will take some time to run.
 ```markdown
 在下一个测试中，我们将收到一个需要一些时间才能发射的Flux。正如您所料，测试将需要一些时间才能运行。
+```
 
+```markdown
     // Expect 10 elements then complete and notice how long the test takes.
     void expect10Elements(Flux<Long> flux) {
         StepVerifier.create(flux).expectNextCount(10).verifyComplete();
@@ -169,7 +177,9 @@ StepVerifier.withVirtualTime(() -> Mono.delay(Duration.ofHours(3)))
 Let's try that by making a fast test of our hour-long publisher:
 ```markdown
 让我们来尝试这一点，通过快速测试我们长达一小时的发布者
+```
 
+```markdown
     // Expect 3600 elements at intervals of 1 second, and verify quicker than 3600s
     // by manipulating virtual time thanks to StepVerifier#withVirtualTime, notice how long the test takes
     void expect3600Elements(Supplier<Flux<Long>> supplier) {

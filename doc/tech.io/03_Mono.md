@@ -53,7 +53,9 @@ Mono.delay(Duration.ofMillis(100)).thenReturn("bar")
 As for the Flux let's return a empty `Mono` using the static factory.
 ```markdown
 就像Flux，让我们使用静态工厂返回一个空Mono。
+```
 
+```markdown
     // Return an empty Mono
     Mono<String> emptyMono() {
         return Mono.empty();
@@ -64,7 +66,9 @@ Now, we will try to create a `Mono` which never emits anything.
 Unlike `empty()`, it won't even emit an `onComplete` event.
 ```markdown
 现在，我们将尝试创建一个从不发射任何东西的Mono。与empty()不同，它甚至不会发出onComplete事件。
+```
 
+```markdown
     // Return a Mono that never emits any signal
     Mono<String> monoWithNoSignal() {
         return Mono.never();
@@ -74,7 +78,9 @@ Unlike `empty()`, it won't even emit an `onComplete` event.
 Like `Flux`, you can create a `Mono` from an available (unique) value.
 ```markdown
 与Flux一样，您可以从可用（唯一）值创建Mono。
+```
 
+```markdown
     // Return a Mono that contains a "foo" value
     Mono<String> fooMono() {
         return Mono.just("foo");
@@ -84,7 +90,9 @@ Like `Flux`, you can create a `Mono` from an available (unique) value.
 And exactly as we did for the flux, we can propagate exceptions.
 ```markdown
 正如我们对Flux所做的那样，我们可以传播异常。
+```
 
+```markdown
     // Create a Mono that emits an IllegalStateException
     Mono<String> errorMono() {
         return Mono.error(new IllegalStateException());

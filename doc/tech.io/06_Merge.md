@@ -14,7 +14,9 @@ with a delay, so in the resulting `Flux` we start seeing values from `flux2` fir
 ```markdown
 在第一个练习中，我们将从两个Flux的元素一到达就合并开始。这里需要注意的是，
 来自flux1的值会延迟到达，因此在得到的Flux中，我们首先看到来自flux2的值。
+```
 
+```markdown
     // Merge flux1 and flux2 values with interleave
     Flux<User> mergeFluxWithInterleave(Flux<User> flux1, Flux<User> flux2) {
         return Flux.merge(flux1, flux2);
@@ -28,7 +30,9 @@ an order corresponding to the source.
 ```markdown
 但是如果我们想保持来源的顺序，我们可以使用concat运算符。Concat将等待flux1完成，
 然后才能订阅flux2，确保flux1中的所有值都已发出，从而保持与源对应的顺序。
+```
 
+```markdown
     // Merge flux1 and flux2 values with no interleave (flux1 values and then flux2 values)
     Flux<User> mergeFluxWithNoInterleave(Flux<User> flux1, Flux<User> flux2) {
         return Flux.concat(flux1, flux2);
@@ -39,7 +43,9 @@ You can use `concat` with several `Publisher`. For example, you can get two `Mon
 and turn them into a same-order `Flux`:
 ```markdown
 您可以将concat与多个发布发布者一起使用。例如，您可以将两个Mono转换为一个 相同顺序的Flux：
+```
 
+```markdown
     // Create a Flux containing the value of mono1 then the value of mono2
     Flux<User> createFluxFromMultipleMono(Mono<User> mono1, Mono<User> mono2) {
         return Flux.concat(mono1, mono2);

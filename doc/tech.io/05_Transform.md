@@ -16,7 +16,9 @@ transformation with no expected latency, we can use the map operator with
 a lambda transforming a T into a U.
 ```markdown
 首先，我们将字符串大写。由于这是一个简单的1-1转换，没有预期的延迟，我们可以使用map运算符和lambda将T转换为U。
+```
 
+```markdown
     // Capitalize the user username, firstname and lastname
     Mono<User> capitalizeOne(Mono<User> mono) {
         return mono.map(user -> {
@@ -29,7 +31,9 @@ We can use exactly the same code on a `Flux`, applying the mapping to each
 element as it becomes available.
 ```markdown
 我们可以在Flux上使用完全相同的代码，在每个元素可用时应用映射。
+```
 
+```markdown
     // Capitalize the users username, firstName and lastName
     Flux<User> capitalizeMany(Flux<User> flux) {
         return flux.map(user -> new User(user.getUsername().toUpperCase(), user.getFirstname().toUpperCase(), user.getLastname().toUpperCase()));
