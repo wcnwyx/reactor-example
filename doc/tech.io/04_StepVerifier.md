@@ -137,7 +137,7 @@ that can be manipulated.
 In order for the operators to pick up that Scheduler, you should lazily build 
 your operator chain inside the lambda passed to withVirtualTime.
 ```markdown
-为了让操作员选择该调度器，您应该在传递给withVirtualTime的lambda内懒惰地构建操作员链。
+为了让运算符选择该调度器，您应该在传递给withVirtualTime的lambda内懒惰地构建运算符链。
 ```
 
 You must then advance time as part of your test scenario, by calling either 

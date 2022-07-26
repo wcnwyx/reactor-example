@@ -91,7 +91,7 @@ It's important to be able to debug reactive APIs, so in the next example we will
 make use of the `log` operator to know exactly what happens in terms of signals 
 and events.
 ```markdown
-能够调试反应式API很重要，因此在下一个示例中，我们将使用日志操作符来准确了解信号和事件的情况。
+能够调试反应式API很重要，因此在下一个示例中，我们将使用日志运算符来准确了解信号和事件的情况。
 ```
 
 Use the `repository` to get a `Flux` of **all** users, then apply a log to it. 
@@ -130,7 +130,7 @@ For example, if you want to print "Requested" each time the operator receives
 a request, use `doOnRequest`. If you want to print "Starting" first, upon 
 subscription before any signal has been received, use `doFirst`, etc.
 ```markdown
-例如，如果您想在操作符每次收到请求时打印"Requested"，请使用doOnRequest。
+例如，如果您想在运算符每次收到请求时打印"Requested"，请使用doOnRequest。
 如果您想先打印"Starting"，在收到任何信号之前订阅时，请使用doFirst等。
 ```
 

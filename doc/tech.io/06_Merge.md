@@ -24,7 +24,7 @@ Concat will wait for `flux1` to complete before it can subscribe to `flux2`,
 ensuring that all the values from `flux1` have been emitted, thus preserving 
 an order corresponding to the source.
 ```markdown
-但是如果我们想保持来源的顺序，我们可以使用concat操作符。Concat将等待flux1完成，
+但是如果我们想保持来源的顺序，我们可以使用concat运算符。Concat将等待flux1完成，
 然后才能订阅flux2，确保flux1中的所有值都已发出，从而保持与源对应的顺序。
 
     // Merge flux1 and flux2 values with no interleave (flux1 values and then flux2 values)

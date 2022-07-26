@@ -4,7 +4,7 @@
 A `Flux<T>` is a Reactive Streams `Publisher`, augmented with a lot of operators 
 that can be used to generate, transform, orchestrate Flux sequences.
 ```markdown
-Flux<T> 是一个反应式流发布者，由许多可用于生成、转换和编排Flux序列的操作者组成。
+Flux<T> 是一个反应式流发布者，由许多可用于生成、转换和编排Flux序列的运算符组成。
 ```
 
 It can emit 0 to n `<T>` elements (`onNext` event) then either completes or errors 

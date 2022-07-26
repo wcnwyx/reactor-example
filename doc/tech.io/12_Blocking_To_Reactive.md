@@ -62,7 +62,7 @@ For slow subscribers (eg. saving to a database), you can isolate a smaller
 section of the sequence with the `publishOn` operator. Unlike `subscribeOn`, 
 it only affects the part of the chain **below** it, switching it to a new `Scheduler`.
 ```markdown
-对于速度较慢的订阅者（例如保存到数据库），可以使用publishOn操作符隔离序列的较小部分。
+对于速度较慢的订阅者（例如保存到数据库），可以使用publishOn运算符隔离序列的较小部分。
 与subscribeOn不同，它只影响其下方链的一部分，将其切换到新的Scheduler。
 ```
 

@@ -10,8 +10,8 @@ and [Mono](https://projectreactor.io/docs/core/release/api/reactor/core/publishe
 javadocs as well as the [reference guide](https://projectreactor.io/docs/core/release/reference/docs/index.html#which-operator)
 to learn about more of them.
 ```markdown
-在本节中，我们将了解一些更有用的操作符，这些运算符不属于我们前面探讨的大类别。
-Reactor 3包含很多操作符，所以请毫不犹豫地查看Flux和Mono javadocs以及参考指南，以了解更多。
+在本节中，我们将了解一些更有用的运算符，这些运算符不属于我们前面探讨的大类别。
+Reactor 3包含很多运算符，所以请毫不犹豫地查看Flux和Mono javadocs以及参考指南，以了解更多。
 ```
 
 ##Practice
@@ -78,7 +78,7 @@ Reactive Streams does not allow null values in `onNext`. There's an operator
 that allow to *just* emit one value, unless it is null in which case it will 
 revert to an *empty* `Mono`. Can you find it?
 ```markdown
-反应流不允许onNext中出现空值。有一个操作符只允许发出一个值，除非它为null，在这种情况下，
+反应流不允许onNext中出现空值。有一个运算符只允许发出一个值，除非它为null，在这种情况下，
 它将恢复为空的Mono。你能找到它吗？
 ```
 
@@ -109,7 +109,7 @@ In this case you can use `collectList` operator that would return `Mono`
 containing that `List`.
 ```markdown
 有时，您希望将Flux发出的所有值捕获到单独的List中。在这种情况下，
-您可以使用collectList操作符返回包含该List的Mono。
+您可以使用collectList运算符返回包含该List的Mono。
 ```
 
 ```markdown
@@ -122,5 +122,5 @@ containing that `List`.
 There are more operators belonging to the *collect* family. You can check them 
 out in `Flux` [documentation](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html).
 ```markdown
-有更多的操作符属于collect系列。您可以在Flux文档中查看它们。
+有更多的运算符属于collect系列。您可以在Flux文档中查看它们。
 ```

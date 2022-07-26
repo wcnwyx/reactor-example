@@ -7,7 +7,7 @@
 A `Mono<T>` is a Reactive Streams `Publisher`, also augmented with a lot of operators 
 that can be used to generate, transform, orchestrate Mono sequences.
 ```markdown
-Mono是一种反应流发布者，还增加了许多操作者，可用于生成、转换和编排Mono序列。
+Mono是一种反应流发布者，还增加了许多运算符，可用于生成、转换和编排Mono序列。
 ```
 
 It is a specialization of `Flux` that can emit **at most 1 <T> element**: 
@@ -26,7 +26,7 @@ A `Mono<Void>` can be used in cases where only the completion signal is interest
 Like for `Flux`, the operators can be used to define an asynchronous pipeline 
 which will be materialized anew for each `Subscription`.
 ```markdown
-与Flux一样，可以使用操作者定义异步管道，该管道将针对每个订阅重新具体化。
+与Flux一样，可以使用运算符定义异步管道，该管道将针对每个订阅重新具体化。
 ```
 
 Note that some API that change the sequence's cardinality will return a `Flux`

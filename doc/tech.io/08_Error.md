@@ -6,7 +6,7 @@ Reactor ships with several operators that can be used to deal with errors:
 propagate errors but also recover from it (eg. by falling back to a different 
 sequence or by retrying a new `Subscription`).
 ```markdown
-Reactor有几个可用于处理错误的操作符：传播错误，但也可以从中恢复（例如，返回到不同的序列或重试新订阅）。
+Reactor有几个可用于处理错误的运算符：传播错误，但也可以从中恢复（例如，返回到不同的序列或重试新订阅）。
 ```
 
 ##Practice

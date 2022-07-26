@@ -88,7 +88,7 @@ intermediate `Publisher` (in fact it can be thought of as both a Subscriber to t
 upstream and a Publisher for downstream). The final form of the data ends up in the final 
 `Subscriber` that defines what to do from a user perspective.
 ```markdown
-Reactor增加了操作者（operators）的概念，将操作者链接在一起，以描述在每个阶段对数据应用什么处理。
-应用操作者将返回一个新的中间发布者（实际上，它可以被视为操作者上游的订阅者和下游的发布者）。数据的最终形式在
+Reactor增加了运算符（operators）的概念，将运算符链接在一起，以描述在每个阶段对数据应用什么处理。
+应用运算符将返回一个新的中间发布者（实际上，它可以被视为运算符上游的订阅者和下游的发布者）。数据的最终形式在
 最终订阅者中结束，该订阅者从用户角度定义了要做的事情。
 ```

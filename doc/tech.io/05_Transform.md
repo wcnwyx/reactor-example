@@ -4,7 +4,7 @@
 ***
 Reactor ships with several operators that can be used to transform data.
 ```markdown
-Reactor有几个可用于转换数据的操作符。
+Reactor有几个可用于转换数据的运算符。
 ```
 
 ##Practice
@@ -13,7 +13,7 @@ In the first place, we will capitalize a `String`. Since this is a simple 1-1
 transformation with no expected latency, we can use the map operator with 
 a lambda transforming a T into a U.
 ```markdown
-首先，我们将字符串大写。由于这是一个简单的1-1转换，没有预期的延迟，我们可以使用map操作符和lambda将T转换为U。
+首先，我们将字符串大写。由于这是一个简单的1-1转换，没有预期的延迟，我们可以使用map运算符和lambda将T转换为U。
 
     // Capitalize the user username, firstname and lastname
     Mono<User> capitalizeOne(Mono<User> mono) {
@@ -40,7 +40,7 @@ Instead, we want to represent the asynchronous call as a `Flux` or `Mono`,
 and use a different operator: `flatMap`.
 ```markdown
 现在想象一下，我们必须调用一个webservice来大写字符串。这个新的调用可能有延迟，
-因此我们不能再使用同步map。相反，我们希望Flux或Mono进行异步调用，并使用不同的操作符：flatMap。
+因此我们不能再使用同步map。相反，我们希望Flux或Mono进行异步调用，并使用不同的运算符：flatMap。
 ```
 
 `flatMap` takes a transformation `Function` that returns a `Publisher<U>` 
